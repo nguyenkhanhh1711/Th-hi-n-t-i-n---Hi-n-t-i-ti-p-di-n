@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Các thì hiện tại – Present Tenses</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:wght@400;500;600;800&family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f0e7d6;--card:#fbf6ea;--ink:#241d1a;--red:#d63a2b;--pink:#f2a3ad;--mute:#6b5d54;--ok:#2a8a5a;--okb:#dcefe3;--no:#c4302b;--nob:#fbdedb;--line:#d9ccb4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.75 "Be Vietnam Pro",system-ui,sans-serif;overflow-x:hidden}
+#grain{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:80;opacity:.14;mix-blend-mode:multiply}
+#top{position:fixed;top:0;left:0;right:0;z-index:60;padding:calc(8px + env(safe-area-inset-top,0px)) 14px 8px;background:var(--paper);border-bottom:2px solid var(--ink);transform:translateY(-110%);transition:transform .4s}
+#top.on{transform:none}
+.tb{max-width:920px;margin:0 auto;display:flex;align-items:center;gap:12px;font:600 14px "Be Vietnam Pro"}
+.tb b{font:400 20px Anton;letter-spacing:1px;color:var(--red)}
+.pg{flex:1;height:10px;border:2px solid var(--ink);background:var(--card)}
+.pg i{display:block;height:100%;width:0;background:var(--red);transition:width .5s}
+.tb span{white-space:nowrap}.tb .o{color:var(--ok)}.tb .w{color:var(--no)}
+#snd{border:0;background:none;font-size:20px;cursor:pointer}
+/* hero */
+header{position:relative;min-height:100vh;overflow:hidden;display:flex;flex-direction:column;align-items:center;padding:46px 16px 40px;text-align:center}
+.vert{position:absolute;left:10px;top:60px;font:400 clamp(30px,6vw,62px)/1 Anton;color:var(--red);writing-mode:vertical-rl;transform:rotate(180deg);letter-spacing:2px}
+.seal{position:absolute;right:16px;top:26px;width:70px;height:70px;border:3px solid var(--red);display:grid;place-items:center;font:400 28px Anton;color:var(--red);transform:rotate(6deg);letter-spacing:1px}
+h1{font:400 clamp(88px,25vw,280px)/.85 Anton;color:var(--red);letter-spacing:-3px;text-shadow:3px 3px 0 #d63a2b33}
+.ko{font:700 clamp(18px,3.4vw,28px) "Noto Sans KR";letter-spacing:6px;margin:4px 0 2px}
+.cap{font:600 12px "Be Vietnam Pro";letter-spacing:4px;color:var(--mute)}
+.frame{position:relative;width:min(340px,80vw);height:min(300px,70vw);border:2px solid var(--ink);background:#f6eedd;margin:18px 0;overflow:hidden}
+.frame svg{width:100%;height:100%;display:block}
+.br{position:absolute;right:-8px;top:-6px;width:70%;pointer-events:none}
+.sub{max-width:520px;margin:4px 0 18px}
+.go{border:2px solid var(--ink);background:var(--red);color:#fff;font:800 16px "Be Vietnam Pro";padding:11px 30px;cursor:pointer;box-shadow:5px 5px 0 var(--ink);transition:.2s}
+.go:hover{transform:translate(-3px,-3px);box-shadow:8px 8px 0 var(--ink)}
+.pt{position:absolute;top:-20px;width:14px;height:10px;border-radius:70% 0 70% 0;background:var(--pink);animation:fall linear infinite;opacity:.9}
+@keyframes fall{to{transform:translate(120px,110vh) rotate(500deg)}}
+.wv{height:46px;background:radial-gradient(circle at 50% 100%,transparent 0 30%,var(--red) 30% 36%,transparent 36% 52%,var(--red) 52% 58%,transparent 58%);background-size:46px 46px;opacity:.85}
+/* sections */
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 130px}
+.sec{padding:70px 0 0}
+.sh{display:flex;align-items:flex-end;gap:14px;border-bottom:3px solid var(--ink);margin-bottom:20px;padding-bottom:6px}
+.sh em{font:400 clamp(54px,12vw,90px)/.8 Anton;color:var(--red);font-style:normal}
+.sh h2{font:800 clamp(22px,4.4vw,34px)/1.2 "Be Vietnam Pro";letter-spacing:-.5px;padding-bottom:6px}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.on{opacity:1;transform:none}
+.card{background:var(--card);border:2px solid var(--ink);padding:20px 24px;margin-bottom:18px;box-shadow:6px 6px 0 var(--red)}
+.card h3{font:800 20px "Be Vietnam Pro";margin-bottom:6px}
+.card h3 small{font-weight:500;color:var(--mute)}
+b{font-weight:600}
+.k{color:var(--red)}
+ul{margin:6px 0 6px 20px}li{margin:3px 0}
+.ok,.bad,.tip{padding:9px 14px;margin-top:10px;font-size:15px;border-left:5px solid}
+.ok{background:var(--okb);border-color:var(--ok)}.bad{background:var(--nob);border-color:var(--no)}.tip{background:#f8e9b8;border-color:#c99a1c}
+.mu{color:var(--mute)}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.g2 .card{margin:0}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:15px;background:var(--card);border:2px solid var(--ink)}
+th{background:var(--red);color:#fff;text-align:left;padding:8px 12px;font:800 14px "Be Vietnam Pro"}
+td{padding:9px 12px;border-top:1.5px solid var(--line);vertical-align:top}
+td:first-child{font-weight:800;background:#f4ead2;white-space:nowrap}
+.chip{display:inline-block;border:1.5px solid var(--ink);padding:0 10px;margin:2px 4px 2px 0;font-size:14px;background:var(--card);transition:.2s}
+.chip:hover{background:var(--red);color:#fff;transform:translateY(-2px)}
+/* quick exercise */
+.qf{background:#fff3c8;border:2px dashed var(--ink);padding:16px 20px;margin:16px 0}
+.qf h4{font:800 16px "Be Vietnam Pro";color:var(--red);margin-bottom:6px}
+.qi{padding:10px 0;border-top:1px solid #d9c98d}.qi:first-of-type{border-top:0}
+.qi input{font:600 16px "Be Vietnam Pro";border:0;border-bottom:2px solid var(--ink);background:transparent;width:150px;padding:0 4px;color:var(--red);text-align:center}
+.qi input:focus{outline:none;border-color:var(--red)}
+.btn{font:800 14px "Be Vietnam Pro";border:2px solid var(--ink);background:var(--card);color:var(--ink);padding:4px 18px;cursor:pointer;box-shadow:3px 3px 0 var(--ink);transition:.15s;margin:6px 8px 0 0}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}.btn.r{background:var(--red);color:#fff}
+/* mcq */
+.q{background:var(--card);border:2px solid var(--ink);padding:16px 22px;margin-bottom:14px;box-shadow:5px 5px 0 var(--ink);transition:box-shadow .3s}
+.q.ok2{box-shadow:5px 5px 0 var(--ok)}.q.no2{box-shadow:5px 5px 0 var(--no)}
+.n{display:inline-block;background:var(--ink);color:#fff;font:400 15px Anton;letter-spacing:1px;padding:0 12px;margin-bottom:4px}
+.q h4,.q p.t{font:600 17.5px/1.55 "Be Vietnam Pro";margin-bottom:10px}
+.q u{text-decoration:none;display:inline-block;min-width:56px;border-bottom:3px solid var(--red);text-align:center;color:var(--red);font-weight:800}
+.op{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+@media(max-width:520px){.op{grid-template-columns:1fr}}
+.op button{display:flex;gap:10px;align-items:center;font:500 15.5px "Be Vietnam Pro";text-align:left;padding:8px 12px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer;transition:.15s}
+.op button b{flex:none;width:26px;height:26px;background:var(--ink);color:#fff;display:grid;place-items:center;font:400 14px Anton}
+.op button:hover:not(:disabled){background:#fff;transform:translateX(4px)}
+.op button:disabled{cursor:default}
+.op .c{background:var(--ok);border-color:var(--ok);color:#fff}.op .c b{background:#fff;color:var(--ok)}
+.op .x{background:var(--no);border-color:var(--no);color:#fff;animation:sk .4s}.op .x b{background:#fff;color:var(--no)}
+@keyframes sk{25%{transform:translateX(-7px)}75%{transform:translateX(7px)}}
+.fb{margin-top:10px;padding:10px 14px;font-size:14.5px;border-left:5px solid;animation:up .4s}
+.fb.ok{background:var(--okb);border-color:var(--ok)}.fb.no{background:var(--nob);border-color:var(--no)}
+@keyframes up{from{opacity:0;transform:translateY(8px)}}
+textarea{width:100%;min-height:58px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);padding:8px 12px;font:16px "Be Vietnam Pro";resize:vertical;margin:6px 0}
+textarea:focus{outline:none;border-color:var(--red)}
+.hint{display:inline-block;border:1.5px dashed var(--red);color:var(--red);font:600 13px "Be Vietnam Pro";padding:0 10px;margin-left:6px}
+#res{background:var(--red);color:#fff;border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink);text-align:center;padding:34px 20px;margin-top:50px}
+#res h2{font:400 40px Anton;letter-spacing:2px}#res .big{font:400 clamp(60px,16vw,110px)/1 Anton}
+#pp{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:8px 0 12px;font-size:14px}#pp i{font-style:normal;border:1.5px solid #fff;padding:0 12px}
+#res .btn{box-shadow:3px 3px 0 var(--ink)}
+details{background:var(--card);border:2px solid var(--ink);padding:10px 18px;margin-bottom:10px}
+summary{font-weight:800;cursor:pointer}details li{font-size:15px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg id="grain"><filter id="nz"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2"/><feColorMatrix values="0 0 0 0 .3 0 0 0 0 .22 0 0 0 0 .15 0 0 0 .9 0"/></filter><rect width="100%" height="100%" filter="url(#nz)"/></svg>
+<div id="top"><div class="tb"><b>HIỆN TẠI</b><div class="pg"><i id="pg"></i></div><span id="st">0/54</span><span class="o" id="so">✔ 0</span><span class="w" id="sw">✘ 0</span><button id="snd" aria-label="Âm thanh">🔊</button></div></div>
+
+<header>
+  <div id="pts"></div>
+  <div class="vert">TENSES</div><div class="seal">THÌ</div>
+  <h1>PRESENT</h1>
+  <div class="ko">현재 시제</div><div class="cap">CÁC THÌ HIỆN TẠI · SIMPLE &amp; CONTINUOUS</div>
+  <div class="frame">
+    <svg viewBox="0 0 300 260"><rect width="300" height="260" fill="#f6eedd"/><circle cx="115" cy="85" r="64" fill="#d63a2b"/><circle cx="165" cy="130" r="58" fill="#2b2420" opacity=".88"/><path d="M110 40Q150 20 190 60" stroke="#f6eedd" stroke-width="2" fill="none" opacity=".4"/>
+    <g><rect x="30" y="196" width="240" height="26" fill="#3b332d"/><path d="M120 222a30 22 0 0 1 60 0z" fill="#f6eedd"/><rect x="62" y="156" width="176" height="40" fill="#b8352a"/><path d="M78 156v40M104 156v40M130 156v40M156 156v40M182 156v40M208 156v40M224 156v40" stroke="#6b1d16" stroke-width="3"/><path d="M36 160Q150 144 264 160Q244 152 232 138L68 138Q56 152 36 160Z" fill="#2b2420"/><rect x="100" y="106" width="100" height="32" fill="#c23c30"/><path d="M82 110Q150 92 218 110Q202 102 192 88L108 88Q98 102 82 110Z" fill="#2b2420"/><path d="M130 88Q150 70 170 88Z" fill="#2b2420"/></g>
+    <path d="M0 222h300v38H0z" fill="#8a8e8a" opacity=".5"/><path d="M0 232q15-8 30 0t30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0 30 0" stroke="#fff" stroke-width="2" fill="none" opacity=".6"/></svg>
+    <svg class="br" id="br" viewBox="0 0 280 200"></svg>
+  </div>
+  <p class="sub">Bản chất của “thì”, Hiện tại đơn, Hiện tại tiếp diễn, cách phân biệt, cùng 40 câu trắc nghiệm và 10 câu dịch có giải thích ngay.</p>
+  <button class="go" id="go">Bắt đầu học ➔</button>
+</header>
+<div class="wv"></div>
+
+<main class="wrap">
+<section class="sec" id="p1">
+  <div class="sh rv"><em>01</em><h2>Bản chất của “Thì” (Tense) trong tiếng Anh</h2></div>
+  <div class="card rv"><h3>Khái niệm</h3><p>Thuật ngữ <b>Tense</b> (Thì) xuất phát từ tiếng Latin <i>“tempus”</i>, nghĩa là <b>thời gian</b>. Chia “thì” chính là sự biến đổi hình thái của <b>ĐỘNG TỪ</b> nhằm cho người nghe biết hành động xảy ra vào thời điểm nào (quá khứ, hiện tại hay tương lai) và ở trạng thái nào (đang diễn ra, đã hoàn thành hay lặp đi lặp lại).</p></div>
+  <div class="card rv"><h3>Sự khác biệt với tiếng Việt</h3><p>Trong tiếng Việt, động từ luôn giữ nguyên hình thức; ta chỉ thêm các từ chỉ thời gian như “đã, đang, sẽ” phía trước.</p><div class="ok"><b>Tiếng Việt:</b> Tôi đi, Tôi <b>đã</b> đi, Tôi <b>đang</b> đi.</div><p style="margin-top:10px">Trong tiếng Anh, <b>bản thân động từ phải biến đổi</b>. Dựa vào hình thức động từ, ta xác định được thời gian và tính chất của sự việc.</p><div class="ok"><b>Tiếng Anh:</b> I go, I went, I am going.</div></div>
+</section>
+
+<section class="sec" id="p2">
+  <div class="sh rv"><em>02</em><h2>Thì Hiện tại đơn (Present Simple)</h2></div>
+  <div class="card rv"><h3>1. Cách sử dụng</h3><ul><li><b>Chân lý, sự thật hiển nhiên:</b> các sự việc luôn đúng. <i class="mu">(Mặt trời mọc đằng Đông.)</i></li><li><b>Thói quen, hành động lặp đi lặp lại:</b> thói quen ở hiện tại. <i class="mu">(Tôi dậy lúc 6 giờ sáng mỗi ngày.)</i></li><li><b>Lịch trình, thời gian biểu cố định:</b> phương tiện công cộng, lịch chiếu phim, giờ học... <i class="mu">(Chuyến tàu khởi hành lúc 8h tối nay.)</i></li></ul></div>
+  <div class="card rv"><h3>2. Dấu hiệu nhận biết</h3><p>Các trạng từ chỉ tần suất:</p><span class="chip">Always (luôn luôn)</span><span class="chip">Usually (thường xuyên)</span><span class="chip">Often (thường)</span><span class="chip">Sometimes (thỉnh thoảng)</span><span class="chip">Rarely / Seldom (hiếm khi)</span><span class="chip">Never (không bao giờ)</span><span class="chip">Every... (every day, every week...)</span></div>
+  <div class="card rv"><h3>3. Cấu trúc ngữ pháp</h3><div class="tw"><table><tr><th>Thể</th><th>Với động từ TO-BE (am/is/are)</th><th>Với động từ THƯỜNG (V)</th></tr>
+  <tr><td>Khẳng định (+)</td><td>S + am / is / are + N/Adj<br><i class="mu">He is a doctor.</i></td><td>S + V(nguyên mẫu) / V(s/es)<br><i class="mu">He plays football.</i></td></tr>
+  <tr><td>Phủ định (−)</td><td>S + am/is/are + NOT<br><i class="mu">He is not a doctor.</i></td><td>S + do/does + NOT + V(nguyên mẫu)<br><i class="mu">He doesn't play football.</i></td></tr>
+  <tr><td>Nghi vấn (?)</td><td>Am/Is/Are + S + N/Adj?<br><i class="mu">Is he a doctor?</i></td><td>Do/Does + S + V(nguyên mẫu)?<br><i class="mu">Does he play football?</i></td></tr></table></div>
+  <div class="tip"><b>QUY TẮC THÊM S/ES:</b> chỉ thêm “s/es” khi chủ ngữ là <b>ngôi thứ 3 số ít</b> (He, She, It, danh từ số ít). Thêm <b>-ES</b> cho động từ tận cùng bằng <b>o, s, ch, x, sh, z</b> (go ➤ goes; watch ➤ watches). Thêm <b>-S</b> cho các trường hợp còn lại.</div>
+  <div class="ok"><b>[ĐÚNG]</b> She doesn't like coffee. <i class="mu">(Đã có trợ động từ “doesn't” thì động từ chính “like” phải ở dạng nguyên mẫu.)</i></div><div class="bad"><b>[SAI]</b> She doesn't likes coffee. <i class="mu">(Sai cấu trúc vì “like” không trở về nguyên mẫu.)</i></div></div>
+  <div class="qf rv" data-k="a"></div>
+</section>
+
+<section class="sec" id="p3">
+  <div class="sh rv"><em>03</em><h2>Thì Hiện tại tiếp diễn (Present Continuous)</h2></div>
+  <div class="card rv"><h3>1. Cách sử dụng</h3><ul><li><b>Hành động đang diễn ra ngay lúc nói:</b> <i class="mu">(Tôi đang giảng bài, các bạn đang lắng nghe.)</i></li><li><b>Sự việc mang tính tạm thời,</b> khác với thói quen cố định: <i class="mu">(Bình thường tôi đi xe đạp, nhưng hôm nay tôi đang đi bộ.)</i></li><li><b>Kế hoạch tương lai đã được chuẩn bị trước:</b> <i class="mu">(Tối nay tôi sẽ gặp nha sĩ, đã đặt lịch hẹn.)</i></li><li><b>Diễn tả sự phàn nàn</b> (kết hợp với “always”): <i class="mu">(Anh ta luôn luôn đi trễ!)</i></li></ul></div>
+  <div class="card rv"><h3>2. Dấu hiệu nhận biết</h3><p>Cụm từ chỉ thời gian hiện tại:</p><span class="chip">Now</span><span class="chip">Right now</span><span class="chip">At the moment</span><span class="chip">At present</span><p style="margin-top:8px">Các động từ gây chú ý (báo hiệu một sự việc đang diễn ra):</p><span class="chip">Look! (Nhìn kìa!)</span><span class="chip">Listen! (Nghe kìa!)</span><span class="chip">Be quiet! (Hãy giữ im lặng!)</span></div>
+  <div class="card rv"><h3>3. Cấu trúc ngữ pháp</h3><div class="tw"><table><tr><th>Thể</th><th>Cấu trúc</th></tr><tr><td>Khẳng định (+)</td><td>S + am/is/are + V-ing</td></tr><tr><td>Phủ định (−)</td><td>S + am/is/are + NOT + V-ing</td></tr><tr><td>Nghi vấn (?)</td><td>Am/Is/Are + S + V-ing?</td></tr></table></div>
+  <div class="ok"><b>[ĐÚNG]</b> Look! The baby is sleeping.</div><div class="bad"><b>[SAI]</b> Look! The baby sleeping. <i class="mu">(Thiếu động từ to-be “is”.)</i></div></div>
+  <div class="qf rv" data-k="b"></div>
+</section>
+
+<section class="sec" id="p4">
+  <div class="sh rv"><em>04</em><h2>Phân biệt trọng tâm: Hiện tại đơn và Hiện tại tiếp diễn</h2></div>
+  <div class="card rv"><h3>1. Bản chất: sự cố định và tính tạm thời</h3><div class="g2" style="margin-top:8px"><div><b class="k">Hiện tại đơn</b> (lâu dài, cố định)<div class="ok">I <b>live</b> in Hanoi.<br><i class="mu">Hà Nội là nơi tôi sinh sống lâu dài.</i></div></div><div><b class="k">Hiện tại tiếp diễn</b> (tạm thời)<div class="ok">I <b>am living</b> in Hanoi.<br><i class="mu">Tôi chỉ đang tạm trú ở Hà Nội một thời gian ngắn.</i></div></div></div></div>
+  <div class="card rv"><h3>2. Động từ chỉ trạng thái (Stative verbs)</h3><p>Nhóm động từ biểu đạt <b>cảm giác, nhận thức, sự sở hữu</b> không được dùng ở thể tiếp diễn (V-ing). Dù ngữ cảnh có “Now”, ta vẫn chia ở <b>Hiện tại đơn</b>.</p><p style="margin-top:8px">Các động từ trạng thái phổ biến:</p><span class="chip">know (biết)</span><span class="chip">understand (hiểu)</span><span class="chip">want (muốn)</span><span class="chip">need (cần)</span><span class="chip">like (thích)</span><span class="chip">love (yêu)</span><span class="chip">hate (ghét)</span><span class="chip">believe (tin tưởng)</span><span class="chip">belong to (thuộc về)</span>
+  <div class="ok"><b>[ĐÚNG]</b> I understand the lesson now.</div><div class="bad"><b>[SAI]</b> I am understanding the lesson now. <i class="mu">(“understand” là động từ trạng thái, không thêm V-ing.)</i></div></div>
+</section>
+
+<section class="sec" id="p5">
+  <div class="sh rv"><em>05</em><h2>Trắc nghiệm tổng hợp (40 câu)</h2></div>
+  <p class="mu rv" style="margin-bottom:16px"><b>Lưu ý:</b> phân tích kỹ ngữ cảnh và các trạng từ chỉ thời gian để phân biệt Hiện tại đơn và Hiện tại tiếp diễn.</p>
+  <div id="mq"></div>
+</section>
+
+<section class="sec" id="p6">
+  <div class="sh rv"><em>06</em><h2>Bài tập dịch thuật (10 câu)</h2></div>
+  <p class="mu rv" style="margin-bottom:16px">Vận dụng từ vựng cơ bản và cấu trúc HTĐ / HTTD để dịch sang tiếng Anh. Viết xong bấm kiểm tra để xem đáp án rồi tự chấm.</p>
+  <div id="ts"></div>
+</section>
+
+<section class="sec" id="p7">
+  <div class="sh rv"><em>07</em><h2>Đáp án bài tập vận dụng nhanh</h2></div>
+  <div id="ans" class="rv"></div>
+  <div id="res" class="rv"><h2>KẾT QUẢ CỦA BẠN</h2><div class="big" id="big">0 / 54</div><div id="pp"></div><p id="msg">Hoàn thành tất cả bài tập để nhận lời nhắn nhé.</p><button class="btn" onclick="location.reload()">Làm lại từ đầu ↺</button></div>
+</section>
+</main>
+
+<script>
+const $=s=>document.querySelector(s);
+let ac,on=true;
+function tone(f,t,d,ty,v,to){const o=ac.createOscillator(),g=ac.createGain();o.type=ty;o.frequency.setValueAtTime(f,t);if(to)o.frequency.exponentialRampToValueAtTime(to,t+d);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.015);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+d+.05)}
+function sfx(ok){if(!on)return;ac=ac||new(window.AudioContext||window.webkitAudioContext)();ac.resume();const t=ac.currentTime;if(ok)[660,880,1175].forEach((f,i)=>tone(f,t+i*.09,.4,"sine",.16));else{tone(300,t,.3,"triangle",.16,190);tone(220,t+.15,.35,"triangle",.14,150)}}
+$("#snd").onclick=()=>{on=!on;$("#snd").textContent=on?"🔊":"🔇"};
+const QF={a:["Bài tập vận dụng nhanh: chia động từ trong ngoặc","Phần 2 – Hiện tại đơn",[
+["My father always (watch) <i></i> TV in the evening.",[["watches"]],"watches","<b>watches</b>. “Always” là dấu hiệu HTĐ, chủ ngữ ngôi 3 số ít và “watch” tận cùng bằng ch nên thêm -es."],
+["<i></i> (they / go) to school on Sundays? No, they (not go) <i></i>.",[["do they go"],["don't go","do not go"]],"Do they go / don't go","<b>Do they go / don't go</b>. HTĐ nghi vấn: Do + S + V nguyên mẫu; phủ định: don't + V nguyên mẫu."]]],
+b:["Bài tập vận dụng nhanh: chia động từ trong ngoặc","Phần 3 – Hiện tại tiếp diễn",[
+["Please be quiet! I (study) <i></i> for my exam.",[["am studying","i am studying","i'm studying"]],"am studying","<b>am studying</b>. “Be quiet!” báo hiệu hành động đang diễn ra → HTTD: am + V-ing."],
+["He is annoying. He always (leave) <i></i> his dirty clothes on the floor.",[["is always leaving","is leaving"]],"is always leaving","<b>is always leaving</b>. HTTD kết hợp “always” để diễn tả sự phàn nàn."]]]};
+const S={q:[0,0],f:[0,0],t:[0,0]},TOT=54;
+function upd(){const a=S.q[1]+S.f[1]+S.t[1],o=S.q[0]+S.f[0]+S.t[0];$("#pg").style.width=a/TOT*100+"%";$("#st").textContent=a+"/"+TOT;$("#so").textContent="✔ "+o;$("#sw").textContent="✘ "+(a-o);$("#big").textContent=o+" / "+TOT;
+$("#pp").innerHTML=`<i>Bài nhanh: ${S.f[0]}/4</i><i>Trắc nghiệm: ${S.q[0]}/40</i><i>Dịch: ${S.t[0]}/10</i>`;
+if(a==TOT){const p=o/TOT;$("#msg").textContent=p>=.9?"Xuất sắc! Bạn nắm chắc các thì hiện tại.":p>=.7?"Khá tốt! Xem lại vài câu sai rồi thử lại nhé.":"Cố lên! Đọc lại phần phân biệt và làm lại nha.";$("#res").scrollIntoView({block:"center"})}}
+const norm=v=>v.toLowerCase().replace(/[’`]/g,"'").replace(/\.$/,"").replace(/\s+/g," ").trim();
+/* quick fill */
+document.querySelectorAll(".qf").forEach(box=>{const e=QF[box.dataset.k];box.innerHTML=`<h4>✏ ${e[0]} <span class="mu" style="font-weight:500">(${e[1]})</span></h4>`;
+e[2].forEach((q,i)=>{const d=document.createElement("div");d.className="qi";const parts=q[0].split("<i></i>");d.innerHTML=`<p><b>${i+1}.</b> `+parts.map((p,k)=>p+(k<parts.length-1?'<input autocomplete="off" spellcheck="false">':"")).join("")+`</p><button class="btn">Kiểm tra</button><div class="fb" style="display:none"></div>`;
+const ins=d.querySelectorAll("input"),bt=d.querySelector(".btn"),fb=d.querySelector(".fb");bt.onclick=()=>{if(ins[0].disabled)return;const ok=[...ins].every((x,k)=>q[1][k].includes(norm(x.value)));ins.forEach(x=>x.disabled=true);bt.disabled=true;fb.style.display="block";fb.className="fb "+(ok?"ok":"no");fb.innerHTML=(ok?"✅ <b>Chính xác!</b> ":`❌ <b>Chưa đúng.</b> Đáp án: <b>${q[2]}</b>. `)+q[3];S.f[0]+=ok;S.f[1]++;sfx(ok);upd()};box.appendChild(d)})});
+/* mcq */
+const L="ABCD";
+const Q=[
+["Look! The bus ___.","comes|is coming|coming|come",1,"“Look!” báo hiệu sự việc đang diễn ra → HTTD: <b>is coming</b>."],
+["She ___ to school by bike every day.","going|is going|goes|go",2,"“Every day” là thói quen, chủ ngữ she → HTĐ thêm -es: <b>goes</b>."],
+["I ___ this exercise now. It is very difficult.","doesn't understand|am not understanding|not understand|don't understand",3,"“Understand” là động từ trạng thái nên không dùng tiếp diễn dù có “now”; chủ ngữ I → <b>don't understand</b>."],
+["Water ___ at 100 degrees Celsius.","boil|boils|is boiling|boiling",1,"Chân lý, sự thật hiển nhiên → HTĐ, chủ ngữ số ít: <b>boils</b>."],
+["Be quiet! The baby ___ in the next room.","sleep|sleeping|is sleeping|sleeps",2,"“Be quiet!” báo hiệu hành động đang diễn ra → <b>is sleeping</b>."],
+["We ___ our grandparents every Sunday.","visit|visiting|visits|are visiting",0,"“Every Sunday” là thói quen, chủ ngữ we → <b>visit</b>."],
+["At the moment, my sister ___ a book in the living room.","reads|reading|read|is reading",3,"“At the moment” → HTTD: <b>is reading</b>."],
+["He usually ___ coffee, but today he ___ tea.","is drinking / drinks|drinks / drinks|drinks / is drinking|is drinking / is drinking",2,"“Usually” → HTĐ (<b>drinks</b>); “today” là việc tạm thời, khác thường lệ → HTTD (<b>is drinking</b>)."],
+["I ___ a new car, but I don't have enough money.","wants|wanting|am wanting|want",3,"“Want” là động từ trạng thái, chủ ngữ I → <b>want</b>."],
+["The train ___ at 8:00 AM tomorrow.","leaves|is leaving|leave|leaving",0,"Lịch trình cố định của phương tiện công cộng → HTĐ: <b>leaves</b>."],
+["Hurry up! Everyone ___ for you.","wait|is waiting|waits|waiting",1,"Hành động đang diễn ra ngay lúc nói → <b>is waiting</b>."],
+["___ you ___ the meaning of this word?","Is / knowing|Do / know|Are / knowing|Does / know",1,"“Know” là động từ trạng thái; chủ ngữ you → <b>Do / know</b>."],
+["My brother is very messy. He ___ his dirty clothes on the floor.","always leaves|leaving|always leave|is always leaving",3,"Phàn nàn kết hợp “always” → HTTD: <b>is always leaving</b>."],
+["It usually ___ heavily in my hometown in July.","rains|rain|raining|is raining",0,"“Usually” → HTĐ, chủ ngữ it → <b>rains</b>."],
+["Where is Tom? - He ___ a shower.","is having|have|has|having",0,"“Have a shower” là hành động (không phải sở hữu) đang diễn ra → <b>is having</b>."],
+["I ___ in Hanoi, but this month I ___ in Ho Chi Minh City.","live / am living|am living / live|am living / am living|live / live",0,"Nơi ở lâu dài → HTĐ (<b>live</b>); “this month” tạm thời → HTTD (<b>am living</b>)."],
+["My mother never ___ late.","getting up|get up|is getting up|gets up",3,"“Never” → HTĐ, chủ ngữ số ít: <b>gets up</b>."],
+["This book ___ to my teacher.","is belonging|belong|belonging|belongs",3,"“Belong to” là động từ trạng thái, chủ ngữ số ít → <b>belongs</b>."],
+["Why ___ you ___ at me like that?","are / looking|does / look|do / look|is / looking",0,"Hành động đang diễn ra ngay lúc nói → <b>are / looking</b>."],
+["The sun ___ in the East and ___ in the West.","rising / setting|is rising / is setting|rises / sets|rise / set",2,"Chân lý → HTĐ, chủ ngữ số ít: <b>rises / sets</b>."],
+["Right now, I ___ a very interesting movie.","watch|watches|am watching|watching",2,"“Right now” → HTTD: <b>am watching</b>."],
+["___ they ___ to the party tonight?","Are / coming|Do / come|Does / come|Is / coming",0,"Kế hoạch đã sắp xếp cho tối nay → HTTD: <b>Are / coming</b>."],
+["He ___ an umbrella because it ___ now.","is carrying / rains|carries / rains|carries / is raining|is carrying / is raining",3,"Có “now”, cả hai hành động đang diễn ra → <b>is carrying / is raining</b>."],
+["Most people ___ that the earth is round.","believe|are believing|believes|believing",0,"“Believe” là động từ trạng thái; chủ ngữ số nhiều → <b>believe</b>."],
+["Listen! Someone ___ the piano.","plays|play|playing|is playing",3,"“Listen!” báo hiệu hành động đang diễn ra → <b>is playing</b>."],
+["She ___ up early, but today she is sleeping late.","wake usually|waking|usually wakes|is usually waking",2,"Thói quen → HTĐ, trạng từ tần suất đứng trước động từ: <b>usually wakes</b>."],
+["What ___ you ___? - I'm a teacher.","are / doing|does / do|is / doing|do / do",3,"Hỏi nghề nghiệp (việc làm thường xuyên) → HTĐ: <b>do / do</b>."],
+["What ___ you ___ now? - I'm writing an email.","does / do|is / doing|are / doing|do / do",2,"Có “now”, hỏi việc đang làm → <b>are / doing</b>."],
+["I ___ you should study harder for the exam.","thinking|think|thinks|am thinking",1,"“Think” (cho ý kiến) là động từ nhận thức, dùng HTĐ: <b>think</b>."],
+["We ___ dinner at a restaurant this evening. We have booked a table.","having|are having|have|has",1,"Kế hoạch đã chuẩn bị (đã đặt bàn) → HTTD: <b>are having</b>."],
+["The chef ___ the soup to see if it needs more salt.","tastes|is tasting|taste|tasting",1,"“Taste” ở đây là hành động nếm đang diễn ra → <b>is tasting</b>."],
+["The soup ___ very delicious.","taste|tastes|tasting|is tasting",1,"“Taste” ở đây là cảm nhận (chỉ trạng thái) nên dùng HTĐ: <b>tastes</b>."],
+["You ___ my pen! Buy your own!","are always borrowing|always borrowing|borrow always|always borrow",0,"Phàn nhàn với “always” → HTTD: <b>are always borrowing</b>."],
+["He ___ to the gym three times a week.","go|goes|is going|going",1,"Tần suất “three times a week” → HTĐ, chủ ngữ he: <b>goes</b>."],
+["I ___ some help with this math problem right now.","needs|am needing|needing|need",3,"“Need” là động từ trạng thái nên dù có “right now” vẫn dùng HTĐ: <b>need</b>."],
+["Look at those dark clouds! It ___.","is raining|rains|rain|raining",0,"Theo đáp án của file, “Look at...” báo hiệu sự việc diễn ra trước mắt → <b>is raining</b>."],
+["My sister ___ her hair every two days.","wash|washes|washing|is washing",1,"“Every two days” là thói quen, chủ ngữ số ít: <b>washes</b>."],
+["Currently, the company ___ a new project in Asia.","developing|develops|is developing|develop",2,"“Currently” (hiện tại đang) → HTTD: <b>is developing</b>."],
+["I ___ him very well. We grew up together.","knows|know|am knowing|knowing",1,"“Know” là động từ trạng thái, chủ ngữ I → <b>know</b>."],
+["My parents ___ for Paris tomorrow morning.","leaving|leaves|leave|are leaving",3,"Kế hoạch đã sắp xếp cho tương lai gần → HTTD: <b>are leaving</b>."]];
+Q.forEach((q,i)=>{const d=document.createElement("div"),o=q[1].split("|");d.className="q rv";d.innerHTML=`<span class="n">CÂU ${i+1}</span><p class="t">${q[0].replace(/___/g,"<u>&nbsp;</u>")}</p><div class="op">${o.map((t,j)=>`<button data-j="${j}"><b>${L[j]}</b>${t}</button>`).join("")}</div><div class="fb" style="display:none"></div>`;
+const bs=d.querySelectorAll("button"),fb=d.querySelector(".fb");bs.forEach(b=>b.onclick=()=>{const j=+b.dataset.j,ok=j==q[2];bs.forEach(x=>x.disabled=true);bs[q[2]].classList.add("c");if(!ok)b.classList.add("x");d.classList.add(ok?"ok2":"no2");fb.style.display="block";fb.className="fb "+(ok?"ok":"no");fb.innerHTML=(ok?"✅ <b>Chính xác!</b> ":`❌ <b>Chưa đúng.</b> Đáp án đúng là <b>${L[q[2]]}. ${o[q[2]]}</b>. `)+q[3];S.q[0]+=ok;S.q[1]++;sfx(ok);upd()});$("#mq").appendChild(d)});
+/* translate */
+const T=[["Mặt trời mọc ở đằng Đông và lặn ở đằng Tây.","rises","The sun rises in the East and sets in the West.","Chân lý → HTĐ."],["Hiện tại, mẹ tôi đang nấu ăn trong bếp.","cooking","At the moment, my mother is cooking in the kitchen.","“At the moment” → HTTD."],["Họ không đi học vào ngày Chủ Nhật.","go","They do not (don't) go to school on Sundays.","Thói quen → HTĐ phủ định."],["Nhìn kìa! Đứa bé đang khóc.","crying","Look! The baby is crying.","“Look!” → HTTD."],["Bạn đang làm gì vậy? - Tôi đang đọc một cuốn sách.","doing","What are you doing? - I am reading a book.","Hành động đang diễn ra → HTTD."],["Anh ấy hiếm khi uống cà phê vào buổi tối.","rarely","He rarely drinks coffee in the evening.","“Rarely” → HTĐ, thêm -s."],["Xin hãy giữ im lặng. Bố tôi đang ngủ.","sleeping","Please be quiet / keep quiet. My father is sleeping.","“Be quiet” + hành động đang diễn ra → HTTD."],["Nước sôi ở 100 độ C.","boils","Water boils at 100 degrees Celsius.","Chân lý → HTĐ."],["Quê tôi ở Hà Nội, nhưng tháng này tôi đang sống ở TP.HCM.","living","I live in Hanoi, but this month I am living in Ho Chi Minh City.","Lâu dài → HTĐ; tạm thời → HTTD."],["Bạn có hiểu bài học này không? (động từ chỉ trạng thái)","understand","Do you understand this lesson?","“Understand” là động từ trạng thái → HTĐ."]];
+T.forEach((t,i)=>{const c=document.createElement("div");c.className="q rv";c.innerHTML=`<span class="n">CÂU ${i+1}</span><p class="t">${t[0]} <span class="hint">${t[1]}</span></p><textarea placeholder="Viết câu tiếng Anh của bạn..."></textarea><button class="btn r">Kiểm tra</button><div class="fb" style="display:none"></div>`;
+const ta=c.querySelector("textarea"),fb=c.querySelector(".fb"),bt=c.querySelector(".btn");bt.onclick=()=>{if(bt.disabled)return;bt.disabled=true;ta.readOnly=true;const v=ta.value.toLowerCase();fb.style.display="block";fb.className="fb ok";
+fb.innerHTML=`${v.trim()?(v.includes(t[1])?"👍 Bạn đã dùng từ khóa <b>"+t[1]+"</b>.":"💡 Bạn chưa dùng từ khóa <b>"+t[1]+"</b>."):"💡 Bạn chưa nhập câu nào."}<br><b>Đáp án:</b> ${t[2]}<br><i>Lưu ý:</i> ${t[3]}<div style="margin-top:6px"><button class="btn" data-r="1">Mình viết đúng</button><button class="btn" data-r="0">Cần luyện thêm</button></div>`;
+fb.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{S.t[0]+=+b.dataset.r;S.t[1]++;fb.querySelector("div").innerHTML=b.dataset.r=="1"?"🎉 Tuyệt, đã ghi nhận!":"🔁 Không sao, đọc lại đáp án rồi thử lần sau nhé.";sfx(b.dataset.r=="1");upd()})};$("#ts").appendChild(c)});
+$("#ans").innerHTML=`<details open><summary>Phần 2 (Hiện tại đơn)</summary><ul><li>1. <b>watches</b></li><li>2. <b>Do they go / don't go</b></li></ul></details><details open><summary>Phần 3 (Hiện tại tiếp diễn)</summary><ul><li>1. <b>am studying</b></li><li>2. <b>is always leaving</b> (diễn tả sự phàn nàn)</li></ul></details>`;
+/* fx */
+$("#go").onclick=()=>$("#p1").scrollIntoView();
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target)}}),{threshold:.06});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+addEventListener("scroll",()=>$("#top").classList.toggle("on",scrollY>innerHeight*.8));
+$("#pts").innerHTML=Array.from({length:14},(_,i)=>`<i class="pt" style="left:${Math.random()*100}%;animation-duration:${9+Math.random()*7}s;animation-delay:${-i*1.3}s"></i>`).join("");
+(function(){let s=`<path d="M280 20C210 30 170 60 120 100C90 124 60 140 20 150" stroke="#4a2f2a" stroke-width="5" fill="none" stroke-linecap="round"/><path d="M200 44C190 70 170 84 160 110M120 100C110 80 96 70 80 62" stroke="#4a2f2a" stroke-width="3" fill="none" stroke-linecap="round"/>`;
+const pts=[[250,26],[222,34],[196,52],[176,70],[150,92],[130,104],[104,116],[76,132],[44,142],[196,76],[168,100],[84,70],[100,88],[238,44]];
+pts.forEach(([x,y])=>{for(let k=0;k<5;k++){const a=k*72*Math.PI/180,r=6;s+=`<circle cx="${x+Math.cos(a)*r}" cy="${y+Math.sin(a)*r}" r="6" fill="#f2a3ad"/>`}s+=`<circle cx="${x}" cy="${y}" r="3" fill="#d63a2b"/>`});$("#br").innerHTML=s})();
+upd();
+</script>
+</body>
+</html>
